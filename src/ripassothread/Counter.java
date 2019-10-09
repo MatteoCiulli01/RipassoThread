@@ -10,12 +10,12 @@ package ripassothread;
  * @author informatica
  */
 public class Counter extends Thread{
-   
+   Storage st;
     public void run() 
     {
         for(int i=0;i<500000;i++)
         {
-        Storage.setValue(i);
+            st.setValue(i);
         }
     }
 }
