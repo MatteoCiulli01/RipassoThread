@@ -11,11 +11,15 @@ package ripassothread;
  */
 public class RipassoThread {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+	public static void main(String[] args)
+	{
+	        Storage s = new Storage();
+                Counter c = new Counter();
+                c.start();
+                Printer p = new Printer();
+                p.start();
+	}
+
+}
     
 }
