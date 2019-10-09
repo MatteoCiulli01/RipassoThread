@@ -14,9 +14,9 @@ public class RipassoThread {
 	public static void main(String[] args)
 	{
 	        Storage s = new Storage();
-                Counter c = new Counter();
+                Counter c = new Counter(s);
                 c.start();
-                Printer p = new Printer();
+                Printer p = new Printer(s);
                 p.start();
 	}
 

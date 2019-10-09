@@ -10,12 +10,17 @@ package ripassothread;
  * @author informatica
  */
 public class Counter extends Thread{
-   Storage st;
+   
+   Storage s;
+  
+   Counter(Storage st)
+   {
+       s=st;
+        new Thread(this, "Contatore").start(); 
+   }
     public void run() 
     {
-        for(int i=0;i<500000;i++)
-        {
-            st.setValue(i);
-        }
+       for(int i=0; i < 5; i++)  
+       s.setValue(i);
     }
 }
