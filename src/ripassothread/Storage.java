@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ripassothread;
 
-/**
- *
- * @author informatica
- */
-public class Storage {
-    
+class Storage{
+      int  i;
+      public synchronized void setValue(int i){
+            this.i = i;
+      }
+      public synchronized int getValue(){
+            return this.i;
+      }
 }
